@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body class="font-serif">
 
-    <header class="bg-gray-900 py-4 fixed top-0 w-full">
+    <header class="bg-gray-900 py-4 w-full">
         //--
     </header>
 
 
-    <div>
-        
-    </div>
 
-    
+    <div x-data="{
+        value: 'test', 
+    }">
+        <input x-model="value" type="text">
+        <span x-text="value"></span>
+    </div>
+   
 
     <main class="flex items-center justify-center h-screen">
 
@@ -34,17 +38,23 @@
 
 
     <nav class="w-full bg-red-50 grid lg:grid-cols-4 grid-cols-1 *:h-96">
-        <a href="" class="group flex items-center justify-center bg-[url('/obrazky/spagety.png')] bg-no-repeat bg-center bg-cover relative">
+        <a href=""
+            class="group flex items-center justify-center bg-[url('/obrazky/spagety.png')] bg-no-repeat bg-center bg-cover relative">
             <p class="text-4xl  text-white underline z-30">Denní menu</p>
-            <div class="h-full w-full bg-red-900 opacity-0 absolute group-hover:opacity-50 top-0 z-20 transition hover:duration-700 ease-in-out"></div>
+            <div
+                class="h-full w-full bg-red-900 opacity-0 absolute group-hover:opacity-50 top-0 z-20 transition hover:duration-700 ease-in-out">
+            </div>
         </a>
-        <a href="" class="flex items-center justify-center bg-[url('/obrazky/pizza.png')] bg-no-repeat bg-center bg-cover">
+        <a href=""
+            class="flex items-center justify-center bg-[url('/obrazky/pizza.png')] bg-no-repeat bg-center bg-cover">
             <p class="text-4xl text-white underline">Denní menu</p>
         </a>
-        <a href="" class="flex items-center justify-center bg-[url('/obrazky/drink.png')] bg-no-repeat bg-center bg-cover">
+        <a href=""
+            class="flex items-center justify-center bg-[url('/obrazky/drink.png')] bg-no-repeat bg-center bg-cover">
             <p class="text-4xl text-white underline">Denní menu</p>
         </a>
-        <a href="" class="flex items-center justify-center bg-[url('/obrazky/zelenina.png')] bg-no-repeat bg-center bg-cover">
+        <a href=""
+            class="flex items-center justify-center bg-[url('/obrazky/zelenina.png')] bg-no-repeat bg-center bg-cover">
             <p class="text-4xl text-white underline">Denní menu</p>
         </a>
     </nav>
